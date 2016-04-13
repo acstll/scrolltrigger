@@ -1,0 +1,23 @@
+{
+  "name": "scrolltrigger",
+  "version": "1.0.0",
+  "description": "Fire callbacks as you scroll (or a low-level version of Waypoints)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/acstll/scrolltrigger.git"
+  },
+  "keywords": [
+    "scroll",
+    "waypoints"
+  ],
+  "author": "acstll <arturo@arturu.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/acstll/scrolltrigger/issues"
+  },
+  "homepage": "https://github.com/acstll/scrolltrigger#readme"
+}

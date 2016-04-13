@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<script src="index.js"></script>
+<style>
+  body {
+    font-family: sans-serif;
+    height: 3500px;
+    margin: 0;
+    padding: 0;
+  }
+
+  div {
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid blue;
+    position: absolute;
+    left: 0;
+    padding: 0.500em 0;
+    text-align: center;
+  }
+
+  #a {
+    top: 640px;
+  }
+  #b {
+    top: 1000px;
+  }
+  #c {
+    top: 1350px;
+  }
+  #d {
+    top: 2000px;
+  }
+  #e {
+    top: 2800px;
+  }
+
+  #middle {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 0;
+    border-top: 1px dashed pink;
+    top: 50%;
+    left: 0;
+  }
+  #label {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+  }
+</style>
+<body>
+  <div id="a">1</div>
+  <div id="b">2</div>
+  <div id="c">3</div>
+  <div id="d">4</div>
+  <div id="e">5</div>
+
+  <span id="middle"></span>
+  <span id="label">..</span>
+
+  <script>
+    var triggers = new Scrolltrigger()
+    var label = document.getElementById('label')
+
+    ;[].forEach.call(document.querySelectorAll('div'), function (el) {
+      triggers.add({
+        el: el,
+        threshold: function () {
+          return this.el.offsetTop - (window.innerHeight * 0.5)
+        },
+        callback: function (direction, point) {
+          var dirLabel = direction === 1 ? 'down' : 'up'
+          label.textContent = point.el.textContent + ' (' + dirLabel + ')'
+        }
+      })
+    })
+  </script>
+</body>
+</html>
