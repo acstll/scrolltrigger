@@ -1,6 +1,6 @@
 {
   "name": "scrolltrigger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fire callbacks as you scroll (or a low-level version of Waypoints)",
   "main": "index.js",
   "scripts": {
